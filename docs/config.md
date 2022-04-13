@@ -41,6 +41,10 @@ Only ``clipcc-vm`` and ``clipcc-gui`` supports hot-reload.
 
 You can also use Yarn Workspace, see [here](hhttps://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces/).
 
+### What's different from the original Scratch
+1. clipcc-gui uses React 17.0.2 instead of React 16.2
+2. clipcc-block rewrites the build script using Python 3, which allows it to run properly on Windows.
+3. We use Yarn.
 ## Testing
 ### Documentation
 
