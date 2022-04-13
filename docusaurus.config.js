@@ -9,7 +9,7 @@ const config = {
   title: 'ClipCC Documentation',
   tagline: 'details of ClipCC\'s features and usage',
   url: 'https://clipteam.github.io/',
-  baseUrl: '/doc/',
+  baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
