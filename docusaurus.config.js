@@ -8,11 +8,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ClipCC Documentation',
   tagline: 'details of ClipCC\'s features and usage',
-  url: 'https://clipteam.github.io/doc/',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
+  url: 'https://clipteam.github.io/',
+  baseUrl: '/doc/',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
-  trailingSlash: true,
   favicon: 'img/favicon.ico',
   organizationName: 'Clipteam', // Usually your GitHub org/user name.
   projectName: 'doc', // Usually your repo name.
@@ -26,12 +25,6 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl: 'https://github.com/Clipteam/docs/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/Clipteam/docs/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -50,13 +43,6 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://codingclip.com/offline',
             label: 'Site',
