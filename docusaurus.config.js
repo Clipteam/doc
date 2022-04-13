@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ClipCC Documentation',
   tagline: 'details of ClipCC\'s features and usage',
-  url: 'https://clipteam.github.io/',
+  url: 'https://doc.clipcc.cn',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
