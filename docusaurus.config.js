@@ -25,6 +25,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          editLocalizedFiles: true,
+          editCurrentVersion: true,
+          editUrl: 'https://github.com/Clipteam/doc/edit/master/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/'
         },
@@ -43,6 +48,7 @@ const config = {
         logo: {
           alt: 'ClipCC',
           src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg'
         },
         items: [
           {

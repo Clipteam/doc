@@ -4,7 +4,7 @@
     "description": "The title in the navbar"
   },
   "item.label.Download": {
-    "message": "Download",
+    "message": "下载",
     "description": "Navbar item with label Download"
   }
 }
