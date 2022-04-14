@@ -15,7 +15,10 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'Clipteam', // Usually your GitHub org/user name.
   projectName: 'doc', // Usually your repo name.
-
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh-cn']
+  },
   presets: [
     [
       'classic',
@@ -48,7 +51,19 @@ const config = {
             label: 'Download',
             position: 'right',
           },
+          {
+            type: 'localeDropdown',
+            position: 'right'
+          },
+          {
+            href: 'https://github.com/Clipteam/clipcc-gui',
+            position: 'right',
+            className: 'header-github-link',
+          }
         ],
+      },
+      colorMode: {
+        respectPrefersColorScheme: true
       },
       footer: {
         style: 'dark',

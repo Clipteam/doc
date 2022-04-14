@@ -1,0 +1,10 @@
+{
+  "title": {
+    "message": "文档",
+    "description": "The title in the navbar"
+  },
+  "item.label.Download": {
+    "message": "Download",
+    "description": "Navbar item with label Download"
+  }
+}

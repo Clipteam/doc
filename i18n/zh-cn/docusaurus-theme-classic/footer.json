@@ -1,0 +1,46 @@
+{
+  "link.title.Docs": {
+    "message": "文档",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Links": {
+    "message": "链接",
+    "description": "The title of the footer links column with title=Links in the footer"
+  },
+  "link.title.More": {
+    "message": "更多",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Features": {
+    "message": "功能",
+    "description": "The label of footer link with label=Features linking to /features/custom-fps"
+  },
+  "link.item.label.For developers": {
+    "message": "开发者",
+    "description": "The label of footer link with label=For developers linking to /developer/at-first"
+  },
+  "link.item.label.Clip Community": {
+    "message": "别针社区",
+    "description": "The label of footer link with label=Clip Community linking to https://codingclip.com/"
+  },
+  "link.item.label.QQ": {
+    "message": "QQ",
+    "description": "The label of footer link with label=QQ linking to https://jq.qq.com/?_wv=1027&k=KDNmpxvN"
+  },
+  "link.item.label.Telegram": {
+    "message": "Telegram",
+    "description": "The label of footer link with label=Telegram linking to https://t.me/ClipCChat"
+  },
+  "link.item.label.Scratch": {
+    "message": "Scratch",
+    "description": "The label of footer link with label=Scratch linking to https://scratch.mit.edu/discuss/topic/557929/?page=19#post-6204055"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/Clipteam/clipcc-gui"
+  },
+  "copyright": {
+    "message": "Copyright © 2022 Clipteam.",
+    "description": "The footer copyright"
+  }
+}
