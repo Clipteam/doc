@@ -1,6 +1,6 @@
 ---
 sidebar_position: 9
-title: Setting
+title: Settings
 ---
 
 Settings are defined in the ``settings.json`` file in the internal root of the extension file and are used to add settings to the editor. All settings of the extension are added to the editor when the extension is loaded, not when it is enabled. That is, the user can modify the extension's settings while the extension is not enabled.
