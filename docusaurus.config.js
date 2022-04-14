@@ -13,6 +13,7 @@ const config = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  trailingSlash: false,
   organizationName: 'Clipteam', // Usually your GitHub org/user name.
   projectName: 'doc', // Usually your repo name.
   i18n: {
