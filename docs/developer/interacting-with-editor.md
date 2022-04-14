@@ -28,7 +28,11 @@ vm.runtime.sequencer.stepThread.prototype = function(thread) {
     originalFunc.call(this, thread);
 };
 ```
-> The result of all operations on the instance depends entirely on the editor's implementation, whose stability and feasibility are not guaranteed and may change from version to version.
+:::caution
+
+The result of all operations on the instance depends entirely on the editor's implementation, whose stability and feasibility are not guaranteed and may change from version to version.
+
+:::
 
 ## Prototype
 

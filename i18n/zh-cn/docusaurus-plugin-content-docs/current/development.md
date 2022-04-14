@@ -7,11 +7,11 @@ title: 开发
 
 :::tip
 
-请确保在开始之前已经安装了[Node.js](https:////www.nodejs.org)和[Git](https://git-scm.com/)，此外我们建议使用Linux而不是Windows进行配置
+请确保在开始之前已经安装了[Node.js](https:////www.nodejs.org)和[Git](https://git-scm.com/)，此外我们建议使用 Linux 而不是 Windows 进行配置
 
 :::
 
-### 在现有的React应用中使用
+### 在现有的 React 应用中使用
 ```bash
 yarn install clipcc-gui@latest
 ```
@@ -49,7 +49,7 @@ yarn start
 
 你也可以使用Yarn工作区, 详情[点此](hhttps://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces/)
 
-### 和原版Scratch的区别
+### 和原版 Scratch 的区别
 1. clipcc-gui 使用 React 17.0.2 而不是 React 16.2
 2. clipcc-block 重写了编译脚本以使用 Python3，并可以在 Windows 上运行
 3. 切换包管理器为 Yarn

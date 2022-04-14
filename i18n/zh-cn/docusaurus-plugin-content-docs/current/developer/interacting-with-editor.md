@@ -1,11 +1,11 @@
 ---
 sidebar_position: 7
-title: Interacting with editor
+title: 与编辑器交互
 ---
 
-You can interact with the editor by using the ``api.getXXXInstance()``
+你可以使用 ``api.getXXXInstance()`` 访问编辑器实例。
 
-## Example
+## 示例
 ```javascript
 const { api } = require('clipcc-extension');
 // ...
@@ -13,14 +13,14 @@ const GUI = api.getGuiInstance();
 const VM = api.getVmInstance();
 const Block = api.getBlockInstance();
 ```
-Now you can modify something in the editor. Here's an example.
+现在你可以修改和访问该实例了，以下是一个例子：
 ```javascript
 // Get the frame rate.
 const frameRate = VM.runtime.frameRate;
 // Modify the frame rate.
 VM.runtime.setFrameRate(30);
 ```
-You can also override a class or function.
+你也可以覆写某个类的函数。
 ```javascript
 const originalFunc = vm.runtime.sequencer.stepThread.prototype;
 vm.runtime.sequencer.stepThread.prototype = function(thread) {
@@ -28,9 +28,13 @@ vm.runtime.sequencer.stepThread.prototype = function(thread) {
     originalFunc.call(this, thread);
 };
 ```
-> The result of all operations on the instance depends entirely on the editor's implementation, whose stability and feasibility are not guaranteed and may change from version to version.
+:::caution
 
-## Prototype
+扩展可以获取编辑器的一些实例，通过直接修改或调用实例的方式完成更为复杂的功能，但对于实例的所有操作的结果完全取决于编辑器的实现，其稳定性和可行性不被保证，在版本间可能存在变动。
+
+:::
+
+## 原型
 
 ```javascript
 function getVmInstance(): Object;

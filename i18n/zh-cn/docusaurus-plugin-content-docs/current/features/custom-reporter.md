@@ -3,19 +3,19 @@ sidebar_position: 2
 title: 自定义返回值
 ---
 
-This feature is suitable for projects that require a lot of recursive operations or need to compress program content. you can eliminate unnecessary variables and blocks by customizing a reporter.
+该功能可以让你减少不必要的积木逻辑，同时提升作品积木逻辑清晰度以实现更多更复杂的功能。
 
-![custom-reporter](/img/custom-reporter.png)
+![自定义返回值](/img/custom-reporter.png)
 
-## How to
-1. Click 'Functions' in category menu.
-2. Click 'Make a Function' button.
-3. customize your reporter by yourself, then check 'Custom reporter'.
-4. Click 'Ok'.
-5. Define this function, You should return something at last.
+## 如何使用
+1. 点击 分类栏中的“函数”。
+2. 点击 “制作新的函数” 按钮。
+3. 自定义你的积木，完成后勾选 '自定义返回值'。
+4. 点击 “完成”。
+5. 定义这个函数，别忘了再最后返回一个值。
 
-## Tips
-1. Reporter won't work when you click it. It's caused by Scratch thread scheduling system. We'll fix this until we refactor the VM.
-2. For the safety of your project's running, **please keep recursive calls to a minimum.**
-3. You cannot edit the type of your custom block.
-4. To avoid confusing the parameters with the custom reporter, we adjusted the original colors.
+## 注意
+1. 自定义返回值积木将不会在点击时返回值。 该问题由原有 Scratch 调度系统引起。 我们会在下一次重构 VM 时修复这个问题。
+2. 为了保证你的作品安全, **请尽量减少递归调用。**
+3. 你不能在首次定义完成后编辑函数类型。
+4. 为了防止参数积木和自定义返回值积木混淆，我们调整了原有自定义积木的颜色。

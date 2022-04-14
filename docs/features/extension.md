@@ -10,7 +10,7 @@ You can load scratch extensions in ClipCC. What's more, ClipCC also introduces a
 ## How to
 ### Install an extension
 You can load extensions from our online extension store or by uploading them.
-1. Click 'Add extensions' butotn in category menu.
+1. Click 'Add extensions' button in category menu.
 2. Click 'Upload' or 'From online' to get the extension.
 3. Check extensions whether your like, then click 'back' to submit and click 'Ok' to confirm.
 4. You can use the extension in your project.

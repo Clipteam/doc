@@ -3,8 +3,11 @@ sidebar_position: 3
 title: Development
 ---
 
-## Installing
-**Please note! Please make sure you have installed Git and Node.js before building. What's more, We recommend that you use Linux rather than Windows for configuration**
+:::tip
+
+Please note! Please make sure you have installed Git and Node.js before building. What's more, We recommend that you use Linux rather than Windows for configuration
+
+:::
 ### Import to your existing React application
 ```bash
 yarn install clipcc-gui@latest

@@ -1,17 +1,17 @@
 ---
 sidebar_position: 6
-title: Print text
+title: 文字打印
 ---
 
-ClipCC offers text printing blocks that can quickly modify print color/size/font and print it on the stage.
+ClipCC 提供了一个全新的文字打印积木，他可以快速地修改打印颜色/大小/字体并在极短的时间内打印完毕。
 
-![Print](/img/print.png)
+![打印](/img/print.png)
 
-## How to
-1. Click "Add extension" button (in the bottom of category menu).
-2. Add "Pen" extension, then you can use these blocks.
+## 如何使用
+1. 点击分类栏中的“添加扩展”按钮。
+2. 添加"画笔"扩展, 然后你就可以使用这些积木了。
 
-## Tips
-1. It's also available in Stage.
-2. Whether or not the fonts will work depends on whether or not the user has installed them.
-3. It's implemented by canvas, so It's not compatible with the High-Quality Pen.
+## 注意
+1. 积木也能在舞台使用。
+2. 打印字体能否正常失效取决于你或者其他人是否安装了该字体。
+3. 该功能使用 canvas 实现， 因此它目前不支持高清画笔。

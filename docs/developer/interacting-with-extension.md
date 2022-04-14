@@ -6,7 +6,7 @@ title: Interacting with extension
 Interaction between extensions is achieved by exposing a function, where a member function of the extension prototype is exposed using the ``registerGlobalFunction`` function, allowing other extensions to call it via the ``callGlobalFunction`` function. Note that getting an instance of an extension directly in another extension is also not prohibited, but results in undefined behavior.
 
 ## Example
-```javascript
+```javascript  title="src/index.js"
 class HelloExtension {
     onInit() {
         api.registerGlobalFunction('helloWorld', this.helloWorld);

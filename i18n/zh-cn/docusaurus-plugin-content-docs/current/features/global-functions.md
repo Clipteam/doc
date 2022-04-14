@@ -1,18 +1,18 @@
 ---
 sidebar_position: 4
-title: Global Functions
+title: 全局函数
 ---
 
-This feature allows you to call an function (or "custom block") everywhere.
+该功能可以让你在任何地方调用函数（即使你没有在当前角色中定义它）！
 
-![Global function](/img/global-function.gif)
+![全局函数](/img/global-function.gif)
 
-## How to
-1. Click 'Functions' in category menu.
-2. Click 'Make a Function' button.
-3. customize your reporter by yourself, then check 'Global function'.
-4. Click 'Ok'.
-5. Define this function, You can call it everywhere.
-## Tips
-1. In principle, global functions should not be renamed, and we cannot guarantee the consequences of this behavior.
-2. The global function is executed on the original sprite.
+## 如何使用
+1. 点击 分类栏中的“函数”。
+2. 点击 “制作新的函数” 按钮。
+3. 自定义你的积木，完成后勾选 '全局自定义函数'。
+4. 点击 “完成”。
+5. 定义这个函数，现在你可以在任何地方调用它了！
+## 注意
+1. 原则上，不应该存在重名函数。我们不能确保它会发生什么。
+2. 全局函数会在定义它的角色中执行。

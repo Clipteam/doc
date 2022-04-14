@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
-title: 社区版
+title: 社区版说明
 ---
-Clip Community is a Online programming platform that uses ClipCC as default editor. There are many differences between the community version of ClipCC and the standalone version.
-1. Community Edition supports unique content related to the community (e.g. version history back, cloud variables, usernames, etc.)
-2. The Community Edition does not support loading extensions by upload. All extensions are reviewed and published by Clipteam to ensure security. You can contact us to publish your extensions.
-3. The community version will not be open source due to security reasons.
+别针社区是一个使用 ClipCC 作为默认编辑器的线上编程平台。 它与独立版本的 ClipCC 存在一些区别。主要在于：
+1. 社区版 ClipCC 支持社区相关内容（例如云变量，用户名，项目回溯等）
+2. 别针社区不支持由用户直接上传扩展，只能使用经过别针团队审核的扩展。
+3. 因为安全原因，社区版不会开源。

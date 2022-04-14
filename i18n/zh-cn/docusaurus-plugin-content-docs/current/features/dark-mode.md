@@ -3,17 +3,17 @@ sidebar_position: 5
 title: 暗色模式
 ---
 
-Dark Mode is a “dramatic” new look that helps you focus on creating in the dark, creating a distraction-free atmosphere.
+暗色模式是一种“戏剧性”的新外观，可帮助您专注于在黑暗中进行创作，营造无干扰的，纯净的氛围。
 
-![Dark mode](/img/dark-mode.png)
+![暗色模式](/img/dark-mode.png)
 
 ## How to
-> Dark mode follow the system by default.
+> 暗色模式默认跟随系统。
 
-1. Click 'Other' in menu
-2. Click 'Settings'
-3. Find 'Appearance' -> 'Dark mode', and set it.
-4. See effect
-## Tips
-1. Following system features may be disabled for system reasons
-2. Please better not use electronic products at night 😉
+1. 点击菜单栏中的“其他”。
+2. 点击“设置”
+3. 找到 '视觉' -> '亮暗设置', 设置它。
+4. 生效。
+## 注意
+1. 跟随系统可能会因为系统因素失效。
+2. 即使有暗色模式，也请不要熬夜哟 😉

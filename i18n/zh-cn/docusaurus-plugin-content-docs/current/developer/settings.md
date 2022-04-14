@@ -1,10 +1,11 @@
 ---
 sidebar_position: 9
-title: Settings
+title: 设置
 ---
 
-Settings are defined in the ``settings.json`` file in the internal root of the extension file and are used to add settings to the editor. All settings of the extension are added to the editor when the extension is loaded, not when it is enabled. That is, the user can modify the extension's settings while the extension is not enabled.
-## Structure
+设置项被定义在扩展文件内部根目录下的 `settings.json` 文件中，用于添加设置项到编辑器。扩展的全部设置项在扩展被载入时就会添加到编辑器中，而不是启用时。即用户可以在扩展并没有被启用的时候修改该扩展的设置项。
+
+## 数据格式
 ```json title="settings.json"
 [
     {
@@ -19,16 +20,16 @@ Settings are defined in the ``settings.json`` file in the internal root of the e
     }
 ]
 ```
-All setting items are defined in ``object``, and their final order in settings is the same as settings.json order, with the following basic key descriptions.
+所有的设置项均以 `object` 形式定义，其最终在设置中的顺序与 `settings.json` 顺序一致，基本键值说明如下：
 
-**id**: ID of the setting item, note that after the extension is loaded, the actual ID is your extension ID followed by the ID of the setting item, e.g. the actual id of ``option1`` above is ``your.extension.id.option1``, where ``your.extension.id`` is your extension ID, which is defined in ``info.json``. This ensures that This ensures that there are no conflicts between the settings of the plugins.
+**id**：设置项的 ID，注意在扩展载入后，实际的 ID 为你的扩展 ID 后加上设置项的 ID，如上述 `option1` 的实际 id 为 `your.extension.id.option1`，其中 `your.extension.id` 是你的扩展 ID，其被定义于 `info.json`。这确保了插件间的设置不会出现冲突。
 
-**type**: the type of the setting item, which corresponds to the type of the control in the setting, see below for details.
+**type**：设置项类型，对应了在设置中的控件类型，具体取值见后。
 
-**default**: the default value, which is also used as the placeholder property of the control if the corresponding control is inputtable. When the default value is restored by the user, the item will be set to this value.
-## Type
-### Boolean
-This setting is a Boolean type that can only have a value of ``true`` or ``false`` and uses the ``Switch`` component.
+**default**：默认值，如果对应的控件是可输入的，那么默认值同时会作为该控件的 placeholder 属性。当设置被用户恢复默认值时，该设置项将被设置为此值。
+## 类型
+### Boolean（布尔值）
+这个设置项是一个布尔类型，其值只能是 `true` 或者 `false`，对应的控件为 `Switch`。
 ```json
 {
     "id": "option",
@@ -36,8 +37,8 @@ This setting is a Boolean type that can only have a value of ``true`` or ``false
     "default": false
 }
 ```
-### Number
-This setting item is a numeric type and uses the ``Input`` component.
+### Number（数字）
+这个设置项是一个数字类型，对应的控件为 `Input`。
 ```json
 {
     "id": "option",
@@ -48,13 +49,14 @@ This setting item is a numeric type and uses the ``Input`` component.
     "precision": 0
 }
 ```
-**max**: *(Optional)* Limit the maximum value of the number.
 
-**min**: *(Optional)* The minimum value of the number.
+**max**：（可选）限定数字的最大值。
 
-**precision**: *(Optional)* Limit the number of decimal places of the number, ``0`` means limit to integer.
-### Selector
-This setting item is a string type and uses ``Selector`` component.
+**min**：（可选）限定数字的最小值。
+
+**precision**：（可选）限定数字的小数点后位数，`0` 表示限定为整数。
+### Selector (选择器)
+这个设置项是一个字符串类型，对应的控件为 `Selector`
 ```json
 {
     "id": "option",
@@ -75,18 +77,18 @@ This setting item is a string type and uses ``Selector`` component.
     }]
 }
 ```
-**items**: set all options of the selector, each option should be described in an object, the id of this object indicates the value of the option, and message indicates the corresponding translation ID.
-## Translation
-Setting items should have translated text and (optionally) description text. If a setting item does not have a translation of the description text set, then its description text will not be displayed.
+**items**：设置选择器的全部选项，每个选项应当以一个对象的形式说明，这个对象的 `id` 表示该选项的值，`message` 表示对应的翻译 ID。
+## 翻译
+设置项应当有翻译文本以及（可选的）描述文本。如果一个设置项没有设置描述文本的翻译，那么不会显示其描述文本。
 ```json
 {
     "your.extension.id.settings.option1": "Option 1",
     "your.extension.id.settings.option1.description": "Help message for option 1"
 }
 ```
-As shown above, the key for the settings translation should be of the connect between ``your.extension.id.settings`` and the settings ID, and the corresponding key for the description text should have ``.description`` appended to it.
-## Interface
+如上述内容所示，设置项翻译的键应当为 `your.extension.id.settings` 加上设置项 ID 的形式，对应的描述文本的键应在其后面添加 `.description`。
+## 接口
 ```javascript
 function getSettings (id: string): any;
 ```
-Effect: Get the value of the setting item with the specified ID.
+效果: 获取设置中某项的值

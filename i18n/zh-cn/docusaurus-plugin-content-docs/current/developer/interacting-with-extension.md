@@ -1,11 +1,11 @@
 ---
 sidebar_position: 8
-title: Interacting with extension
+title: 与扩展交互
 ---
 
-Interaction between extensions is achieved by exposing a function, where a member function of the extension prototype is exposed using the ``registerGlobalFunction`` function, allowing other extensions to call it via the ``callGlobalFunction`` function. Note that getting an instance of an extension directly in another extension is also not prohibited, but results in undefined behavior.
+扩展间交互通过暴露一个函数实现，在扩展中，使用 `registerGlobalFunction` 函数将扩展原型中的某一个成员函数暴露，允许其他扩展通过 `callGlobalFunction` 函数调用。注意，在其他扩展中直接获取某一个扩展的实例同样也是不被禁止的，但其结果是未定义的行为。
 
-## Example
+## 示例
 ```javascript title="src/index.js"
 class HelloExtension {
     onInit() {
@@ -18,14 +18,13 @@ class HelloExtension {
 }
 ```
 
-**registerGlobalFunction(name, func)**: accepts two parameters, the global function name and the function object, the function name is recommended to use the extension . function name to prevent conflicts with other extended functions. If a name is already occupied, then the later registered function should not be loaded and an error will be thrown.
+**registerGlobalFunction(name, func)**：接受两个参数，分别表示全局函数名和函数对象，函数名推荐使用 `扩展名.函数名` 的形式，以防止与其他扩展的函数冲突。如果某个名称已经被占用了，那么后注册的函数不应当被载入，并抛出一个错误。
 
-**unregisterGlobalFunction(name)**: Delete a global function that has been registered. Note that you should only delete global functions that you have registered, otherwise the behavior is undefined. After the extension is uninstalled, the global functions registered by the extension should be deleted.
+**unregisterGlobalFunction(name)**：删除某个已经注册的全局函数，注意，你应当只删除自己注册的全局函数，否则行为未定义。在扩展被卸载后，该扩展注册的全局函数应当被删除。
 
+**callGlobalFunction(name, ...arg)**：接受一个函数名，后面跟随着参数列表，用来调用对应的函数。如果对应的函数不存在，则应当抛出一个错误。
 
-**callGlobalFunction(name, ...arg)**: Accepts a function name, followed by a list of arguments, to call the corresponding function. If the corresponding function does not exist, an error should be thrown.
-
-## Prototype
+## 原型
 
 ```javascript
 function registerGlobalFunction(name, func): void;
