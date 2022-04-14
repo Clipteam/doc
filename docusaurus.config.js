@@ -45,7 +45,7 @@ const config = {
         items: [
           {
             href: 'https://codingclip.com/offline',
-            label: 'Site',
+            label: 'Download',
             position: 'right',
           },
         ],
@@ -57,25 +57,29 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Features',
+                to: '/features/custom-fps',
               },
+              {
+                label: 'For developers',
+                to: '/developer/at-first',
+              }
             ],
           },
           {
-            title: 'Community',
+            title: 'Links',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Clip Community',
+                href: 'https://codingclip.com/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'QQ',
+                href: 'https://jq.qq.com/?_wv=1027&k=KDNmpxvN',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Telegram',
+                href: 'https://t.me/ClipCChat',
               },
             ],
           },
@@ -83,12 +87,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Scratch',
+                href: 'https://scratch.mit.edu/discuss/topic/557929/?page=19#post-6204055',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Clipteam/clipcc-gui',
               },
             ],
           },
