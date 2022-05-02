@@ -3,11 +3,11 @@
     "message": "当前版本",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Features": {
+  "sidebar.docs.category.Features": {
     "message": "功能",
     "description": "The label for category Features in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.For developers": {
+  "sidebar.docs.category.For Developers": {
     "message": "开发者",
     "description": "The label for category For developers in sidebar tutorialSidebar"
   }

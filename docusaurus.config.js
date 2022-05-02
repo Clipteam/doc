@@ -45,13 +45,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Documentation',
         logo: {
           alt: 'ClipCC',
           src: 'img/logo.svg',
           srcDark: 'img/logo-dark.svg'
         },
         items: [
+          {
+            type: 'doc',
+            position: 'left',
+            docId: 'intro',
+            label: 'Docs',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'api',
+            label: 'API',
+          },
           {
             href: 'https://codingclip.com/offline',
             label: 'Download',
