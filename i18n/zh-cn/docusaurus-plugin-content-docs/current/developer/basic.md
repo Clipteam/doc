@@ -100,6 +100,10 @@ class ExampleExtension extends Extension {
 module.exports = ExampleExtension;
 ```
 
+:::tip 注意  
+返回值只能是 **String**、**Number** 或 **Boolean** 返回其他类型可能导致作品加载失败  
+:::
+
 然后打开 locales/en.json 填入以下内容
 
 ```json title="locales/en.json"
