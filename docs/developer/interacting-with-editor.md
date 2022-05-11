@@ -34,6 +34,12 @@ The result of all operations on the instance depends entirely on the editor's im
 
 :::
 
+:::caution
+
+In community version, the Block instance is unavailable in player.
+
+:::
+
 ## Prototype
 
 ```javascript
