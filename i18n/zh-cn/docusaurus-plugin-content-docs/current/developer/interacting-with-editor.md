@@ -38,7 +38,7 @@ vm.runtime.sequencer.stepThread.prototype = function(thread) {
 
 在社区版中，Block 实例是无法在播放器环境下访问的。
 
-"""
+:::
 
 ## 原型
 
