@@ -27,9 +27,10 @@ const sidebars = {
         'features/custom-reporter',
         'features/extension',
         'features/global-functions',
+        'features/hqpen',
+        'features/compiler',
         'features/dark-mode',
         'features/print-text',
-        'features/hqpen'
       ],
     },
     {
@@ -46,7 +47,8 @@ const sidebars = {
         'developer/i18n',
         'developer/interacting-with-editor',
         'developer/interacting-with-extension',
-        'developer/settings'
+        'developer/settings',
+        'developer/compiler-optimize'
       ],
     }
   ],

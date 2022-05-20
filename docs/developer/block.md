@@ -35,7 +35,7 @@ api.addBlock({
             default: 'Hello World!'
         }
     },
-    function: args => args.VALUE;
+    function: args => args.VALUE
 });
 ```
 The opcode is the unique identifier of the block, and the messageId is the text that will be displayed in the block(If you haven't written i18n). The categoryId is the category that the block belongs to. The param is the parameter of the block, and the function is the function that will be executed when the block is executed. The function will receive the parameter as an argument.
