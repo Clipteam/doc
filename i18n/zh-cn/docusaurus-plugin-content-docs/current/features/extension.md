@@ -7,6 +7,10 @@ title: 扩展
 
 ![扩展](/img/extension.png)
 
+## 与原版的区别
+1. 从零构建，不基于 Scratch 原有架构。
+2. 支持从项目文件中直接加载，而不通过 URL 进行加载。
+3. 直接运行在浏览器而不是 Worker 或 iframe 内。
 ## 如何使用
 ### 安装一个扩展
 你可以从在线扩展商店或者从本地上传来安装一个扩展。
@@ -17,7 +21,7 @@ title: 扩展
 ### 制作一个扩展
 我们编写了制作扩展的基本教程和相关文档。请访问[这里](/developer/at-first)。
 ## 注意
-1. ClipCC 扩展与原版 Scratch 扩展不兼容。因此不支持在 Turbowarp, adacraft 和 E羊icques等编辑器中加载。
+1. ClipCC 扩展与原版 Scratch 扩展不兼容。因此不支持在 Turbowarp, adacraft 和 E羊icques 等编辑器中加载。
 2. 社区版 ClipCC 对第三方扩展有很严格的限制, 请参考 [这里](/community).
 3. 桌面版 (tauri 版除外) ClipCC 可以在启动时加载扩展。 你可以把你需要启动时加载的扩展文件放在程序目录下的``/extensions``文件夹中。
 4. ClipCC 扩展可以存储在 .cc3 项目文件中并在启动中被加载， 不过它默认不会保存带有可选标识的扩展。你可以在设置中调整它。

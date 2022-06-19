@@ -7,6 +7,10 @@ You can load scratch extensions in ClipCC. What's more, ClipCC also introduces a
 
 ![Extension](/img/extension.png)
 
+## Differences compared to scratch
+1. A completely different extension system than Scratch was built from scratch.
+2. Can be loaded with project, No need to load from URL.
+3. Run directly in the browser instead of inside a Worker or iframe.
 ## How to
 ### Install an extension
 You can load extensions from our online extension store or by uploading them.

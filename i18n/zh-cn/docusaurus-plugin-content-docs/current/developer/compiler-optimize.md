@@ -21,7 +21,7 @@ api.addBlock({
         }
     },
     function: args => args.VALUE,
-    compile: (args, isWrap) => {
+    compile: (args, isWrap, variablePool, thread) => {
         return "..."; // The snippet of JavaScript code
     }
 });
