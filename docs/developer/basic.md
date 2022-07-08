@@ -33,14 +33,6 @@ After answering the questions, the scaffold will automatically install the depen
 After running, the contents of your folder should look like this.
 
 ```
-/src
-package.json
-webpack.config.js
-```
-
-Where the core code of the extension is stored under the src folder, the contents of the folder should look like this (it's normal that the locales folder doesn't exist, so please create it yourself to attach files)
-
-```
 assets/
 - icon.jpg
 - inset_icon.svg
@@ -48,11 +40,13 @@ locales/
 - en.json
 index.js
 info.json
+package.json
+webpack.config.js
 ```
 
 The locales directory is used to store the text of the block in different languages, assets is used to store the plugin resources, index.js is the main file to register the block/implement the function, and info.json is the plugin information.
 
-First, open src/index.js and fill in the following content.
+First, open index.js and fill in the following content.
 
 ```javascript
 const {api, type, extension} = require('clipcc-extension');

@@ -34,14 +34,6 @@ ccext-cli
 你的扩展目录应该看起来像这样
 
 ```
-/src
-package.json
-webpack.config.js
-```
-
-扩展的核心代码存放在 src 文件夹下，src 内的文件的内容应该是这样的（ locales 文件夹不存在是正常的，请自行创建相关文件）
-
-```
 assets/
 - icon.jpg
 - inset_icon.svg
@@ -49,13 +41,15 @@ locales/
 - en.json
 index.js
 info.json
+package.json
+webpack.config.js
 ```
 
 locales 目录用于存放不同语言的翻译文本，assets 用于存放插件资源，index.js 是注册模块/实现功能的主文件，info.json 是插件信息
 
-让我们先打开 src/index.js 并填入以下内容
+让我们先打开 index.js 并填入以下内容
 
-```javascript title="src/index.js"
+```javascript title="index.js"
 const {api, type, extension} = require('clipcc-extension');
 class ExampleExtension extends Extension {
     onInit() {
