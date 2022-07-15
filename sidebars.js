@@ -44,6 +44,7 @@ const sidebars = {
         'developer/structure',
         'developer/load',
         'developer/block',
+        'developer/advanced-block-usage',
         'developer/i18n',
         'developer/interacting-with-editor',
         'developer/interacting-with-extension',
