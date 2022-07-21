@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc=self.webpackChunkdoc||[]).push([[723],{2130:function(e){e.exports=JSON.parse('{"title":"Features","slug":"/category/features","permalink":"/zh-cn/category/features","navigation":{"previous":{"title":"\u5f00\u53d1","permalink":"/zh-cn/development"},"next":{"title":"\u81ea\u5b9a\u4e49\u5e27\u7387","permalink":"/zh-cn/features/custom-fps"}}}')}}]);
