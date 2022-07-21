@@ -63,3 +63,42 @@ api.addBlock({
 });
 ```
 当积木被拖拽至工作区后，项目会进入“假”运行状态（绿旗高亮，但没有脚本被触发）。编辑器每帧都会检查该 HAT 是否被触发。只有当上一帧返回``false``且当前帧返回``true``时积木才会正常被调用。
+
+## 树状积木
+ClipCC 从 3.1.4 开始提供对树状积木的支持。以下是一个定义树状积木的定义：
+```javascript title="index.js"
+api.addBlock({
+    opcode: 'example.if',
+    type: type.BlockType.COMMAND,
+    messageId: 'example.if',
+    categoryId: 'example.category',
+    branchCount: 1,
+    param: {
+        COND: {
+            type: type.ParameterType.BOOLEAN
+        }
+    },
+    function: (args, util) => {
+        // If the condition is true, start the branch.
+        if (!!args.COND) util.startBranch(1, false);
+    }
+});
+```
+```json title="en.json"
+{
+    "example.if": "if [COND] [SUBSTACK]"
+}
+```
+　　你需要在 BlockPrototype 中指定 "branchCount", 它意味着树状积木的分支数量。 你还需要在语言文件中以 [SUBSTACKX] 的命名方式定义分支参数。
+　　对于一个树状积木, 你可以通过 util 对象中的 startBranch 方法来进行流程控制。
+```javascript
+/**
+* 在当前积木下触发某个分支
+* @param {number} branchNum 触发分支的编号 (i.e., 1, 2).
+* @param {boolean} isLoop 这个分支是否是一个循环
+*/
+startBranch (branchNum, isLoop) {...}
+```
+当 ``isLoop`` 参数被设为 true 时, 积木将被重复调用，直到startBranch 不再被触发。当被设为 false 时, 当前积木将被立刻跳出。 当``branchNum``参数未被指定时, 默认为1。这里有一个关于流程控制的 [更为详细的范例](https://github.com/SimonShiki/neurons).
+
+编写这类积木通常需要对线程和调度器进行修改, 所以你需要对 Scratch/ClipCC 的代码具有一定程度上的理解。通常情况下，我们不推荐你定义这类积木。
