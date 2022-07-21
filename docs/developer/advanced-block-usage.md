@@ -63,3 +63,43 @@ api.addBlock({
 });
 ```
 When the block is dragged into the workspace, the entire project will be under the illusion of "unstoppable" but no scripts are being executed. The editor checks every frame to see if this HAT is triggerred. The hat block will only be called normally if the previous frame returns ``false`` and the current frame returns ``true``.
+
+## Branch
+ClipCC provides support for menu input since version 3.1.4. Here's the definition:
+```javascript title="index.js"
+api.addBlock({
+    opcode: 'example.if',
+    type: type.BlockType.COMMAND,
+    messageId: 'example.if',
+    categoryId: 'example.category',
+    branchCount: 1,
+    param: {
+        COND: {
+            type: type.ParameterType.BOOLEAN
+        }
+    },
+    function: (args, util) => {
+        // If the condition is true, start the branch.
+        if (!!args.COND) util.startBranch(1, false);
+    }
+});
+```
+
+```json title="en.json"
+{
+    "example.if": "if [COND] [SUBSTACK]"
+}
+```
+　　You should specify "branchCount" in BlockPrototype, which means the number of branches of the block. You should also specify the location of the branch in the translation file and name it with [SUBSTACKX].
+　　For a BRANCH block, You can control the flow through the ``startBranch`` provided in the ``util`` object.
+```javascript
+/**
+* Start a branch in the current block.
+* @param {number} branchNum Which branch to step to (i.e., 1, 2).
+* @param {boolean} isLoop Whether this block is a loop.
+*/
+startBranch (branchNum, isLoop) {...}
+```
+When the ``isLoop`` parameter is specified as true, the blocks will be executed repeatedly until no startBranch is triggered. When false, the block will be ejected immediately. When the ``branchNum`` parameter is not specified, it defaults to 1. There's an [example](https://github.com/SimonShiki/neurons).
+
+Writing this type of block usually requires modifications to the thread and sequencer, so you need to have a certain level of understanding of the Scratch/ClipCC source code. In general, we do not recommend that you create such blocks.
